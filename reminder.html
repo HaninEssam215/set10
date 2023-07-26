@@ -34,7 +34,7 @@
             font-family: 'now regular', sans-serif;
             margin: 0;
             white-space: nowrap;
-            color: #545454;
+            color: #222222;
             letter-spacing: 2px;
         }
         .alta{
@@ -45,6 +45,7 @@
         }
         .now_bold{
             font-family: 'now bold', sans-serif;
+            font-weight: bold;
         }
         .now_regular{
             font-family: 'now regular', sans-serif;
@@ -55,28 +56,142 @@
         .inline_block{
             display: inline-block;
         }
+        .dark{
+            color: #006d77;
+        }
+        .light{
+            color: #5d9691; 
+        }
 
         /**********************CONTAINERS*******************/
         .container{
             width: 1227pt;
-            height: 1680pt;
+            height: 1646pt;
             margin: auto;
             position: relative;
             background-color: #83c5be;
+            padding-top: 50px;
         }
         .content{
-            padding-right: 150px;
-            padding-left: 150px;
+            height: 1585pt;
+            padding-right: 74px;
+            padding-left: 74px;
             background-color: white;
+            margin-right: 110px;
+            margin-left: 60px;
+            margin-top: 20px;
+            
         }
 
+        /****************************HEADER***********************/
+        .Header{
+            position: relative;
+            height: 135px;
+            margin-bottom: 81.4px;
+        }
+        .page_no{
+            /* font-size: 11pt; */
+            position: absolute;
+            right: 110px;
+            top: 25px;
+        }
+        .page_name{
+            font-size: 70.32pt;
+            position: absolute;
+            top: 74px;
+        }
+        .logo{
+            font-size: 50.32pt;
+            position: absolute;
+            right: 70px;
+            top: 74px;
+        }
+
+        /****************************INVOICE***********************/
+        .invoice{
+            position: relative;
+            height: 286.167px;
+            margin-bottom: 148px;
+        }
+        .invoice .title{
+            margin-bottom: 25.16px;
+            font-size: 22.2pt;
+        }
+        .invoice_to{
+            position: absolute;
+            top:0;
+        }
+        .name{
+            font-size: 57pt;
+            margin-bottom: 29.6px;
+        }
+        .payable_to{
+            margin-left: 849px;
+            position: absolute;
+            top: 14.8px;
+        }
+        .payable_to .title{
+            font-size: 22.2pt;
+        }
+        .ocr{
+            margin-top: 66.6px;
+        }
+        /****************************REMINDER TEXT*****************/
+        .reminder_text{
+            padding-bottom: 66.6px;
+            border-bottom: 5px solid #006d77;
+            margin-bottom: 33.3px;
+            white-space: normal;
+        }
+        .reminder_text .title{
+            margin-bottom: 37px;
+            font-size: 28.2pt;
+        }
+        .reminder_text .first_p{
+            margin-bottom: 29.6px;
+        }
+
+        /****************************TABLE*************************/
+        .table{
+            position: relative;
+            border-bottom: 5px solid #006d77;
+            margin-bottom: 29.6px;
+        }
+        .table .title{
+            margin-bottom: 41.44px;
+        }
+        .table_rows{
+            margin-bottom: 25.16px;
+        }
+        .table .value{
+            position: absolute;
+            right: 0;
+        }
+        .total{
+            position: relative;
+            height: 29px;
+            padding-bottom: 22.2px;
+            border-bottom: 5px solid #006d77;
+            margin-bottom: 62.9px;
+            right: -930px;
+            width: 390px;
+        }
+        .total .title{
+            position: absolute;
+            right: 161.4px;
+        }
+        .total .value{
+            position: absolute;
+            right: 0;
+        }
         /****************************PAYMENT***********************/
         .payment{
             margin-top: 40px;
             position: relative;
+            font-size: 90% !important;
         }
         .payment_title{
-            font-size: 18.67566681px;
+            font-size: 32.2px;
             margin-bottom: 35px;
         }
         .payment .second-column{
@@ -88,21 +203,26 @@
             margin-bottom: 24px;
         }
 
+
         /*************************FOOTER************************/
         .footer{
             color: #5b4f47;
-            margin-top: 120px;
+            margin-top: 100px;
             letter-spacing: 0 !important;
+            position: absolute;
+            bottom: 80px;
+            font-family: 'poppins', sans-serif;
+            font-weight: 300;
         }
         .footer i{
-            margin-right: 15px;
-            font-size: 22px;
-            color: #121212 !important;
+            margin-right: 30px;
+            font-size: 32px;
+            color: #006d77 !important;
         }
         .footer .contacts{
             display: flex;
             justify-content: space-between;
-            font-weight: bold;
+            padding-bottom: 33.3px;
         }
         .footer .mail{
             margin-left: 100px;
@@ -111,28 +231,31 @@
             margin-left: 100px;
         }
         .footer_key{
-            margin-top: 10px;
-            padding-left: 145px;
+            font-size: 15.84pt;
+            margin-top: 20px;
+            padding-left: 300px;
             color: #1c2120;
+            font-family: 'poppins', sans-serif;
+            font-weight: 300;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="page_no">PAGE 1/1</div>
+        <div class="page_no">Page 1/1</div>
         <div class="content">
 
             <!----------------------HEADER------------------>
             <div class="Header">
-                <div class="page_name">REMINDER</div>
-                <div class="logo">LOGO</div>
+                <div class="page_name inline dark alta">REMINDER</div>
+                <div class="logo inline light glacial">LOGO</div>
             </div>
 
             <!----------------------INVOICE---------------->
             <div class="invoice">
-                <div class="invoice_to">
-                    <div class="title">Invoice to :</div>
-                    <div class="name">Rufus Stewart</div>
+                <div class="invoice_to inline_block">
+                    <div class="title dark now_bold">Invoice to :</div>
+                    <div class="name alta">Rufus Stewart</div>
                     <div class="address">
                         <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
                         <div>Date: 21/05/2022</div>
@@ -141,8 +264,8 @@
                         <div>&#60;receiver_extra_field2>: &#60;value2></div>
                     </div>
                 </div>
-                <div class="payable_to">
-                    <div class="title">Payable to :</div>
+                <div class="payable_to inline_block">
+                    <div class="title dark now_bold">Payable to :</div>
                     <div class="company_info">
                         <div>&#60;company_name></div>
                         <div>&#60;organisation_number></div>
@@ -160,7 +283,7 @@
 
             <!---------------------REMINDER TEXT----------->
             <div class="reminder_text">
-                <div class="title">Påminnelse obetald faktura nr 5682 från Comp. Inc.</div>
+                <div class="title dark now_bold">Påminnelse obetald faktura nr 5682 från Comp. Inc.</div>
                 <div class="text first_p">
                     Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att överlämnas till inkasso vilket medför ytterligare kostnader.
                 </div>
@@ -172,40 +295,40 @@
 
             <!------------------REMINDER TABLE----------->
             <div class="table">
-                <div class="title">
+                <div class="title dark">
                     <div>REMINDER REFERS TO</div>
                 </div>
                 <div class="table_rows">
                     <div class="inline_block">Invoice:</div>
-                    <div class="inline_block">$ 15.00</div>
+                    <div class="inline_block value">$ 15.00</div>
                 </div>
                 <div class="table_rows">
                     <div class="inline_block">Invoice amount:</div>
-                    <div class="inline_block">$ 20.00</div>
+                    <div class="inline_block value">$ 20.00</div>
                 </div>
                 <div class="table_rows">
                     <div class="inline_block">Due date:</div>
-                    <div class="inline_block">$ 18.00</div>
+                    <div class="inline_block value">$ 18.00</div>
                 </div>
                 <div class="table_rows">
                     <div class="inline_block">Reminder fee:</div>
-                    <div class="inline_block">$ 8.00</div>
+                    <div class="inline_block value">$ 8.00</div>
                 </div>
                 <div class="table_rows">
                     <div class="inline_block">Interest fee:</div>
-                    <div class="inline_block">$ 10.00</div>
+                    <div class="inline_block value">$ 10.00</div>
                 </div>
             </div>
 
             <div class="total">
-                <div class="title">TOTAL AMOUNT :</div>
-                <div class="inline value">$ 86.00</div>
+                <div class="title inline dark">TOTAL AMOUNT :</div>
+                <div class="inline value"><b>$ 86.00</b></div>
             </div>
 
             <!----------------PAYMENT------------------>
             <div class="payment">
-                <div class="payment_title">
-                    <div><b>Payment Method</b></div>
+                <div class="payment_title dark">
+                    <div><b>PAYMENT INFO</b></div>
                 </div>
                 <div class="inline_block">
                     <div class="inline_block first-column">
@@ -248,7 +371,7 @@
 
         <div class="footer_key" style="position: relative;">
             <div class="inline">&#60;footer_key_1> &#60;footer_key_1> </div>
-            <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
+            <div class="inline"style="padding-left: 200px;">&#60;footer_key_2> &#60;footer_key_2></div>
         </div>
     </div>
 </body>
